@@ -6,9 +6,10 @@
 
 $(function() {
 
-  $('.thumbnails img').click(function(e) {  
-    const attrImg =  $(this).attr('src');
-    const attrAlt = $(this).attr('alt');
+  $('.thumbnails a').click(function(e) {  
+    e.preventDefault();
+    const attrImg =  $(this).find('img').attr('src');
+    const attrAlt = $(this).find('img').attr('alt');    
 
     $('.hero img').attr('src', attrImg);
     $('.hero img').attr('alt', attrAlt);
@@ -16,8 +17,5 @@ $(function() {
     console.log($(this));
     
   });
-
-
-	
 
 });
