@@ -6,10 +6,12 @@
 
 $(function() {
 
-	$('.thumbnails').click(function(e) {
-		console.log('this ran when clicked');
-		$('.hero img').attr('src', this.attr('src'));
-	});
+  $('.thumbnails img').click(function(e) {  
+    const attrImg =  $(this).attr('src');
+
+    $('.hero img').attr('src', attrImg);
+    console.log($(this));
+  });
 
 	
 
