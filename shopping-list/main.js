@@ -23,10 +23,11 @@ $(function() {
     $('.js-shopping-list-entry').val('');
   }); 
 
-
-  $('ul').on('click', 'li span', function(event) {
-    $(this).addClass('.shopping-item__checked');
-    console.log('check clicked');
+	// add a checked class to li spans when btn.shop-item-toggle is clicked
+  $('.shopping-list').on('click', 'button.shopping-item-toggle', function() {
+		$(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+		console.log(this);
+    console.log('check testing click');
   });
 
 
