@@ -8,10 +8,15 @@ $(function() {
 
   $('.thumbnails img').click(function(e) {  
     const attrImg =  $(this).attr('src');
+    const attrAlt = $(this).attr('alt');
 
     $('.hero img').attr('src', attrImg);
+    $('.hero img').attr('alt', attrAlt);
+
     console.log($(this));
+    
   });
+
 
 	
 
